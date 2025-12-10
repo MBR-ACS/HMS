@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>welcome</title>
+        {% load static %}
+        <link rel='stylesheet' href="static/css/welcome.css"></link>
+    </head>
+    <body>
+        <h1>Welcome to My website</h1>
+
+        <a href="admin"> Admin Dashboard </a><br>
+        <a href="{% url 'products' %}"> Products </a><br>
+        <a href="{% url 'friend' 1 %}"> Friends </a>
+    </body>
+</html>

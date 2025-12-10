@@ -1,0 +1,22 @@
+h1{
+    color: red;
+    text-align: center;
+    font-size: 50px;
+}
+
+body{
+    background-image: url('http://127.0.0.1:8000/static/images/wall.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a {
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}

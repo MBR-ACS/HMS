@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def products(request):
     prod = ['pen', 'mouse', 'car', 'mobile']
@@ -12,5 +13,10 @@ def friends(request, idx):
     except IndexError:
         return HttpResponse("Something went wrong.......!!!")
 
+'''
 def welcome(request):
     return HttpResponse("Hello welcome to my website.")
+''' 
+
+def welcome(request):
+    return render(request, 'welcome.html')
