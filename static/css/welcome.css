@@ -10,6 +10,7 @@ body{
 
 /* Top Header */
 .header {
+    position: fixed;
     width: 100%;
     background: rgb(47, 0, 122);
     color: white;
@@ -31,8 +32,10 @@ body{
     width: auto;
     background: rgba(45, 117, 150, 0.7);
     padding: 20px;
-    color: white;
+    margin-top: 65px;
+    box-sizing: border-box;
 }
+
 
 /* Links */
 a {
@@ -43,7 +46,7 @@ a {
 }
 
 a:hover{
-    color: orange;
+    color: rgb(0, 13, 131);
 }
 
 /* Main Content Area */

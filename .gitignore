@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+
+venv/
+.env
+
+db.sqlite3
+
+# Django migrations except __init__.py
+migrations/
+!migrations/__init__.py
