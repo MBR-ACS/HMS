@@ -1,22 +1,53 @@
-h1{
-    color: red;
-    text-align: center;
-    font-size: 50px;
-}
-
 body{
-    background-image: url('http://127.0.0.1:8000/static/images/wall.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url('http://127.0.0.1:8000/static/images/background.jpg');
+    background-size: cover;
+    height: 100vh;
+    flex-direction: column;
 }
 
-a {
-    color: blue;
+/* Top Header */
+.header {
+    width: 100%;
+    background: rgb(47, 0, 122);
+    color: white;
+    text-align: center;
+    padding: 15px;
     font-size: 30px;
+    font-weight: bold;
+    border-bottom: 4px solid red;
+}
+
+/* Main Structure */
+.main {
+    display: flex;
+    flex: 1;
+}
+
+/* Left Side Panel */
+.sidebar {
+    width: auto;
+    background: rgba(45, 117, 150, 0.7);
+    padding: 20px;
+    color: white;
+}
+
+/* Links */
+a {
+    color: yellow;
+    font-size: 22px;
     font-weight: bold;
     text-decoration: none;
 }
 
 a:hover{
-    color: red;
+    color: orange;
+}
+
+/* Main Content Area */
+.content {
+    padding: 20px;
+    font-size: 25px;
 }
