@@ -19,11 +19,14 @@
             <a href="admin">Admin Dashboard</a><br><br>
             <a href="{% url 'products' %}">Patients</a><br><br>
             <a href="{% url 'friend' 1 %}">Appointments</a><br><br>
+            <a href="{% url 'list-doctors' %}">Doctors</a><br><br>
         </div>
 
         <!-- Main Content -->
         <div class="content">
             <p></p>
+            {% block content %}
+            {% endblock %}
         </div>
 
     </div>

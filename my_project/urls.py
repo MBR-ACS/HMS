@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('products/', views.products, name='products'),
     path('friends/<int:idx>', views.friends, name='friend'),
-    path('', views.welcome),
-    path('doctors/', include('doctors.urls')),
+    path('', views.welcome, name='home'),
+    path('doctors/', include('doctors.urls'), name='doc-page'),
 ]
