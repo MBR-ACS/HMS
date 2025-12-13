@@ -16,16 +16,17 @@
 
         <!-- Left Panel -->
         <div class="sidebar">
-            <a href="admin">Admin Dashboard</a><br><br>
+            <a href="admin">Admin</a><br><br>
             <a href="{% url 'products' %}">Patients</a><br><br>
-            <a href="{% url 'friend' 1 %}">Appointments</a><br><br>
             <a href="{% url 'list-doctors' %}">Doctors</a><br><br>
+            <a href="{% url 'friend' 1 %}">Appointments</a><br><br>
         </div>
 
         <!-- Main Content -->
         <div class="content">
             <p></p>
             {% block content %}
+            {% include "dashboard/dashboard.html" %}
             {% endblock %}
         </div>
 
