@@ -1,6 +1,4 @@
 from django.db import models
-from datetime import datetime, date
-today = datetime.now()
 # Create your models here.
 
 class Patient(models.Model):
@@ -9,9 +7,8 @@ class Patient(models.Model):
     phone = models.IntegerField(null=True)
     city = models.CharField(null=True)
     disease = models.TextField(null=True)
-    created_at = models.DateTimeField(default=today)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
 
     def __str__(self):
         return self.name

@@ -1,7 +1,6 @@
 from django.db import models
-from datetime import datetime
 from departments.models import Department
-today = datetime.now()
+
 # Create your models here.
 
 class Doctor(models.Model):
@@ -11,7 +10,7 @@ class Doctor(models.Model):
     phone = models.IntegerField(null=True)
     city = models.CharField(null=True)
     dept_id = models.ForeignKey(Department, on_delete=models.CASCADE, null=True)
-    created_at = models.DateTimeField(default=today)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 
