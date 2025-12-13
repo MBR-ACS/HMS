@@ -5,7 +5,7 @@ today = datetime.now()
 
 class Department(models.Model):
     dept_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100, null=False)
+    name = models.CharField(max_length=100, null=False, help_text='enter department')
     created_at = models.DateTimeField(default=today)
     updated_at = models.DateTimeField(auto_now=True)
 
