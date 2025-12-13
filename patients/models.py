@@ -1,16 +1,14 @@
 from django.db import models
-from datetime import datetime
-from departments.models import Department
+from datetime import datetime, date
 today = datetime.now()
 # Create your models here.
 
-class Doctor(models.Model):
+class Patient(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100, null=False)
-    email = models.CharField(max_length=100, null=True)
     phone = models.IntegerField(null=True)
     city = models.CharField(null=True)
-    dept_id = models.ForeignKey(Department, on_delete=models.CASCADE, null=True)
+    disease = models.TextField(null=True)
     created_at = models.DateTimeField(default=today)
     updated_at = models.DateTimeField(auto_now=True)
 
