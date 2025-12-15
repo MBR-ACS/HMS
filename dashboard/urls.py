@@ -2,5 +2,5 @@ from django.urls import path
 from dashboard import views
 
 urlpatterns = [
-    path('dashboard/', views.dashboard, name='dash-board')
+    path('dashboard/', views.dashboard, name = 'dash-board'),
 ]
