@@ -19,10 +19,8 @@ from django.urls import path, include
 from my_project import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
-    path('products/', views.products, name='products'),
-    path('friends/<int:idx>', views.friends, name='friend'),
-    path('', views.welcome, name='home'),
-    path('doctors/', include('doctors.urls')),
-    path('dashboard/', include('dashboard.urls')),
+    path('admin/', admin.site.urls, name='admin'), # url for admin page
+    path('', views.welcome, name='home'), # url for welcome / start page
+    path('doctors/', include('doctors.urls')), # doctors page
+    path('dashboard/', include('dashboard.urls')), # dashboard page
 ]
