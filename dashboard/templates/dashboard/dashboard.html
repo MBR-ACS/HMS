@@ -30,8 +30,8 @@
         }
 
         .db-label {
-            font-size: 13px;
-            color: #ff0404ff;
+            font-size: 15px;
+            color: #2d1ff8ff;
         }
 
     </style>
@@ -44,7 +44,7 @@
         <p class="db-text">
             We have successfully treated patients across multiple departments with consistent care and follow-ups.
         </p>
-        <h2 class="db-number"> {{ patients }} </h2>
+        <h2 class="db-number">{{ patients_cnt }} </h2>
         <span class="db-label">Total Patients</span>
     </div>
 
@@ -52,23 +52,23 @@
         <p class="db-text">
             Our experienced doctors work across specialties to ensure accurate diagnosis and quality treatment.
         </p>
-        <h2 class="db-number"> {{ doctor }}</h2>
+        <h2 class="db-number">{{ doctor_cnt }} </h2>
         <span class="db-label">Total Doctors</span>
     </div>
 
     <div class="db-card">
         <p class="db-text">
-            Advanced operation theatres and skilled surgeons enable us to perform complex procedures safely.
+            We have treated our patients gracefully and resolving all the appointments..
         </p>
-        <h2 class="db-number">{{ nurse }}</h2>
-        <span class="db-label">Total Surgeries</span>
+        <h2 class="db-number">{{ appointment_cnt }}</h2>
+        <span class="db-label">Total Appointments</span>
     </div>
 
     <div class="db-card">
         <p class="db-text">
-            Dedicated nursing staff provide continuous monitoring, care, and patient support around the clock.
+            Our patients are happy with the nursing we provide. Our all Nurses are experienced and contributing their hardwork
         </p>
-        <h2 class="db-number">{{ department }}</h2>
+        <h2 class="db-number">{{ nurse_cnt }}</h2>
         <span class="db-label">Total Nurses</span>
     </div>
 

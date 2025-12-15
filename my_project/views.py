@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from dashboard.views import statictics
 
 def products(request):
     prod = ['pen', 'mouse', 'car', 'mobile']
@@ -19,4 +20,5 @@ def welcome(request):
 ''' 
 
 def welcome(request):
-    return render(request, 'welcome.html')
+    data = statictics()
+    return render(request, 'welcome.html', context=data)
