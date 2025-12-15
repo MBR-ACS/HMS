@@ -23,5 +23,6 @@ urlpatterns = [
     path('products/', views.products, name='products'),
     path('friends/<int:idx>', views.friends, name='friend'),
     path('', views.welcome, name='home'),
-    path('doctors/', include('doctors.urls'), name='doc-page'),
+    path('doctors/', include('doctors.urls')),
+    path('dashboard/', include('dashboard.urls')),
 ]
