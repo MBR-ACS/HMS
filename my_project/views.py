@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from dashboard.views import statictics
+from apps.dashboard.views import statictics
 
 '''
 def welcome(request):

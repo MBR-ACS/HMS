@@ -1,5 +1,5 @@
 from django.db import models
-from departments.models import Department
+from apps.departments.models import Department
 
 # Create your models here.
 

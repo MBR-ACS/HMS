@@ -1,6 +1,6 @@
 from django.db import models
-from doctors.models import Doctor
-from patients.models import Patient
+from apps.doctors.models import Doctor
+from apps.patients.models import Patient
 # Create your models here.
 class Appointments(models.Model):
     appointment_id = models.AutoField(primary_key=True)

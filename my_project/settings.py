@@ -39,12 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # user defined apps
-    'doctors',
-    'patients',
-    'appointments',
-    'departments',
-    'dashboard',
-    'nurses',
+    'apps.doctors',
+    'apps.patients',
+    'apps.appointments',
+    'apps.departments',
+    'apps.dashboard',
+    'apps.nurses',
 
 ]
 

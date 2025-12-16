@@ -1,5 +1,5 @@
 from django.db import models
-from doctors.models import Doctor
+from apps.doctors.models import Doctor
 # Create your models here.
 
 GENDER_CHOICES = (('M', 'Male'),('F', 'Female'))

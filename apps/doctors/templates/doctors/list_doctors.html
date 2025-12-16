@@ -1,0 +1,8 @@
+<html>
+    <h1>Doctors List</h1>
+    {% for doctor in doctors %}
+    <li>{{ doctor.name }}</li>
+    {% endfor %}
+
+     <a href="{% url 'home' %}">Go to Home Page</a><br><br>
+</html>

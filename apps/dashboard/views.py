@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from doctors.models import Doctor
-from patients.models import Patient
-from nurses.models import Nurses
-from appointments.models import Appointments
+from apps.doctors.models import Doctor
+from apps.patients.models import Patient
+from apps.nurses.models import Nurses
+from apps.appointments.models import Appointments
 
 # Create your views here.
 
