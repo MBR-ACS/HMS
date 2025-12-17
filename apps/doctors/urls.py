@@ -3,5 +3,6 @@ from apps.doctors import views
 from apps.doctors import views
 
 urlpatterns = [
-    path('list_doctors/', views.list_doctors, name='list-doctors')
+    path('list_doctors/', views.list_doctors, name='list-doctors'),
+    path('create_doctors/', views.create_doctor, name='create-doctors')
 ]
