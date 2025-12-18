@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.welcome, name='home'), # url for welcome / start page
     path('doctors/', include('apps.doctors.urls')), # doctors page
     path('dashboard/', include('apps.dashboard.urls')), # dashboard page
+    path('appointments/', include('apps.appointments.urls'))
 ]
