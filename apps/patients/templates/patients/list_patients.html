@@ -1,0 +1,36 @@
+<html>
+<h1>Patients List</h1>
+<br>
+<a href="{% url 'home' %}">Go to Home Page</a><br><br>
+<table border='1px'>
+    <thead>
+        <tr>
+            <th>patient_id</th>
+            <th>name</th>
+            <th>phone</th>
+            <th>city</th>
+            <th>gender</th>
+            <th>notes</th>
+            <th>doctor_id</th>
+            <th>created_at</th>
+            <th>updated_at</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in patients %}
+        <tr>
+            <td>{{ p.patient_id }}</td>
+            <td>{{ p.name }}</td>
+            <td>{{ p.phone }}</td>
+            <td>{{ p.city }}</td>
+            <td>{{ p.gender }}</td>
+            <td>{{ p.notes }}</td>
+            <td>{{ p.doctor_id }}</td>
+            <td>{{ p.created_at }}</td>
+            <td>{{ p.updated_at }}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+</html>

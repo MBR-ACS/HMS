@@ -1,6 +1,12 @@
 <html>
 <h1>Appoinments List</h1>
-<table border='1px'>
+<head>
+    <title>Appoinments</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+</head>
+<a href="{% url 'home' %}">Go to Home Page</a><br><br>
+<table class='hms-table'>
     <thead>
         <tr>
             <th>id</th>
@@ -27,6 +33,4 @@
 
     </tbody>
 </table>
-
-     <a href="{% url 'home' %}">Go to Home Page</a><br><br>
 </html>

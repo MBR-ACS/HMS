@@ -1,29 +1,27 @@
 <html>
-<h1>Doctors List</h1>
+<h1>Nurses List</h1>
 <table border='1px'>
     <thead>
         <tr>
-            <th>id</th>
+            <th>nurse_id</th>
             <th>name</th>
             <th>email</th>
             <th>phone</th>
             <th>city</th>
-            <th>dept_id</th>
             <th>created_at</th>
             <th>updated_at</th>
         </tr>
     </thead>
     <tbody>
-        {% for d in doctors %}
+        {% for n in nurses %}
         <tr>
-            <td>{{ d.id }}</td>
-            <td>{{ d.name }}</td>
-            <td>{{ d.email }}</td>
-            <td>{{ d.phone }}</td>
-            <td>{{ d.city }}</td>
-            <td>{{ d.dept_id }}</td>
-            <td>{{ d.created_at }}</td>
-            <td>{{ d.updated_at }}</td>
+            <td>{{ n.nurse_id }}</td>
+            <td>{{ n.name }}</td>
+            <td>{{ n.email }}</td>
+            <td>{{ n.phone }}</td>
+            <td>{{ n.city }}</td>
+            <td>{{ n.created_at }}</td>
+            <td>{{ n.updated_at }}</td>
         </tr>
         {% endfor %}
 

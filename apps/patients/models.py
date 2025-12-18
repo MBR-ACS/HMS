@@ -9,7 +9,7 @@ class Patient(models.Model):
     name = models.CharField(max_length=100, null=False)
     phone = models.IntegerField(null=True)
     city = models.CharField(max_length=50, null=True)
-    gender = models.CharField(max_length=1,choices=GENDER_CHOICES)
+    gender = models.CharField(max_length=1,choices=GENDER_CHOICES, null=False, default='Other')
     notes = models.TextField(null=True)
     doctor_id = models.ForeignKey(Doctor, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True)

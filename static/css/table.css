@@ -1,0 +1,26 @@
+/* Hospital Patient Table */
+.hms-table {
+    width: 100%;
+    background: #f5f9fc;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Header */
+.hms-table th {
+    background: #2f80ed;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Cells */
+.hms-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+/* Hover */
+.hms-table tr:hover {
+    background: #dbeeff;
+}

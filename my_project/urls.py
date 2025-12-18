@@ -23,5 +23,8 @@ urlpatterns = [
     path('', views.welcome, name='home'), # url for welcome / start page
     path('doctors/', include('apps.doctors.urls')), # doctors page
     path('dashboard/', include('apps.dashboard.urls')), # dashboard page
-    path('appointments/', include('apps.appointments.urls'))
+    path('appointments/', include('apps.appointments.urls')),
+    path('departments/', include('apps.departments.urls')),
+    path('nurses/', include('apps.nurses.urls')),
+    path('patients/', include('apps.patients.urls')),
 ]
