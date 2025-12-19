@@ -1,5 +1,6 @@
 <html>
-<h1>Departments List</h1>
+<h1>Departments List</h1><br>
+<a href="{% url 'add-dept' %}">Add New Department</a><br><br>
 <table border='1px'>
     <thead>
         <tr>
@@ -7,6 +8,7 @@
             <th>name</th>
             <th>created_at</th>
             <th>updated_at</th>
+            <th>Options</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +18,7 @@
             <td>{{ d.name }}</td>
             <td>{{ d.created_at }}</td>
             <td>{{ d.updated_at }}</td>
+             <td><a href="{% url 'edit-dept' d.dept_id %}">Edit</a> | <a href="{% url 'delete-dept'  d.dept_id %}">Delete</a></td>
         </tr>
         {% endfor %}
 
