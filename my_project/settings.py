@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.departments',
     'apps.dashboard',
     'apps.nurses',
+    'apps.accounts',
 
 ]
 
@@ -139,5 +140,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+LOGIN_URL = '/accounts/log_in/'
+
+LOGIN_REDIRECT_URL = ''
+
+LOGOUT_REDIRECT_URL = '/accounts/log_in/'
 
 STATICFILES_DIRS = [BASE_DIR / "static"] # This tells to django where our css file is present
