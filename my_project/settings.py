@@ -141,9 +141,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-LOGIN_URL = '/accounts/log_in/'
+LOGIN_URL = 'log-in'
 
-LOGIN_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = 'home'
 
 LOGOUT_REDIRECT_URL = '/accounts/log_in/'
 

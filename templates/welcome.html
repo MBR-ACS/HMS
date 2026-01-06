@@ -22,8 +22,12 @@
             <a href="{% url 'list-doctors' %}">Doctors</a><br><br>
             <a href="{% url 'list-nurses' %}">Nurses</a><br><br>
             <a href="{% url 'list-patients' %}">Patients</a><br><br>
-            <a href="{% url 'list-appointments' %}">Appointments</a><br>
-            <a href="{% url 'log-out' %}">LogOut</a><br>
+            <a href="{% url 'list-appointments' %}">Appointments</a><br><br>
+            {% comment %} <a href="{% url 'log-out' %}">LogOut</a><br> {% endcomment %}
+            <form method='POST' action="{% url 'log-out' %}">
+                {% csrf_token %}
+                <button type='submit'>LogOut</button>
+            </form>
         </div>
 
         <!-- Main Content -->

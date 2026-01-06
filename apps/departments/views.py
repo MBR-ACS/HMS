@@ -2,12 +2,15 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from apps.departments.models import Department
 from apps.departments.forms import DepartmentForm
+from django.contrib.auth.decorators import login_required, permission_required
 
 # Create your views here.
+@permission_required('departments.view_department', raise_exception=True)
 def list_departments(request):
     departments = Department.objects.all()
     return render(request, 'departments/list_departments.html', context={'departments':departments})
 
+@permission_required('departments.add_department', raise_exception=True)
 def add_department(request):
     if request.method == 'POST':
         form = DepartmentForm(request.POST)
@@ -21,6 +24,8 @@ def add_department(request):
         form = DepartmentForm()
     return render(request, 'departments\create_department.html', context={'form':form})
 
+@login_required
+@permission_required('departments.change_department', raise_exception=True)
 def edit_department(request, dept_id):
     obj = Department.objects.get(dept_id=dept_id)
     form = DepartmentForm(instance=obj)
@@ -35,6 +40,8 @@ def edit_department(request, dept_id):
             return HttpResponse("***Your form is invaid***")
     return render(request, 'departments\create_department.html', context={'form':form})
 
+@login_required
+@permission_required('departments.delete_depertment', raise_exception=True)
 def delete_department(request, dept_id):
     obj  = Department.objects.get(dept_id=dept_id)
     obj.delete()
